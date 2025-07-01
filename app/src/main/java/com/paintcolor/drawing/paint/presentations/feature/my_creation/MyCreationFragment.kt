@@ -12,8 +12,6 @@ import com.paintcolor.drawing.paint.base.BaseFragment
 import com.paintcolor.drawing.paint.databinding.FragmentMyCreationBinding
 import com.paintcolor.drawing.paint.firebase.ads.RemoteName
 import com.paintcolor.drawing.paint.firebase.event.EventName
-import com.paintcolor.drawing.paint.presentations.components.dialogs.CongratulationDialog
-import com.paintcolor.drawing.paint.presentations.components.dialogs.UnlockAllRewardDialog
 import com.paintcolor.drawing.paint.presentations.feature.my_creation.MyCreationUiState.Companion.COLORING
 import com.paintcolor.drawing.paint.presentations.feature.my_creation.MyCreationUiState.Companion.SKETCH
 import com.paintcolor.drawing.paint.widget.gone

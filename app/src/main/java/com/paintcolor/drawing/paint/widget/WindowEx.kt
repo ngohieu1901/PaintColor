@@ -58,3 +58,9 @@ private fun Window.setFullScreenWallpaper(): Boolean {
     windowInsetsController.hide(WindowInsetsCompat.Type.systemGestures())
     return false
 }
+
+inline fun View.visibleIf(condition: Boolean, gone: Boolean = true) = if (condition) {
+    visible()
+} else {
+    if (gone) gone() else invisible()
+}

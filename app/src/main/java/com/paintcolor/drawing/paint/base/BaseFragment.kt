@@ -159,15 +159,15 @@ abstract class BaseFragment<VB : ViewBinding>(
         }
     }
 
-    protected suspend fun showLoading() {
+    protected fun showLoading() {
         (activity as? BaseActivity<*>)?.showLoading()
     }
 
-    protected suspend fun dismissLoading() {
+    protected fun dismissLoading() {
         (activity as? BaseActivity<*>)?.dismissLoading()
     }
 
-    protected suspend fun renderLoading(isLoading: Boolean) {
+    protected fun renderLoading(isLoading: Boolean) {
         if (isLoading) showLoading() else dismissLoading()
     }
 

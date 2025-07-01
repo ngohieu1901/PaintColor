@@ -130,17 +130,14 @@ abstract class BaseActivity<VB : ViewBinding>() : AppCompatActivity() {
         }
     }
 
-    suspend fun showLoading() {
-        withContext(Dispatchers.Main) {
-            if (loadingDialog.isShowing.not())
-                loadingDialog.show()
-        }
+    fun showLoading() {
+        if (loadingDialog.isShowing.not())
+            loadingDialog.show()
     }
 
-    suspend fun dismissLoading() {
-        withContext(Dispatchers.Main) {
-            if (loadingDialog.isShowing) loadingDialog.dismiss()
-        }
+    fun dismissLoading() {
+        if (loadingDialog.isShowing) loadingDialog.dismiss()
+
     }
 
     protected suspend fun renderLoading(isLoading: Boolean) {

@@ -7,6 +7,7 @@ sealed interface LanguageUiState {
     data object Loading : LanguageUiState
     data class Error(val e: Throwable): LanguageUiState
     data class Language(
-        val listLanguage: List<LanguageModelNew> = emptyList(),
+        val listLanguage: List<LanguageModelNew> = emptyList()
     ) : LanguageUiState
+
 }

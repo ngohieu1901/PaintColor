@@ -23,7 +23,6 @@ class TemplateRepositoryImpl(
     private val filesUtils: FilesUtils,
     private val context: Context
 ): TemplateRepository {
-    val downloadMap by lazy { mutableMapOf<Long, String>() }
 
     override suspend fun getAllTemplateOnServer(): DataResult<List<Template>> = withContext(ioDispatcher) {
         try {
