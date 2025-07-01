@@ -1,0 +1,1 @@
+C:\Amazic\ASA111SketchDraw\gpuimage\src\main\cpp\CMakeLists.txt

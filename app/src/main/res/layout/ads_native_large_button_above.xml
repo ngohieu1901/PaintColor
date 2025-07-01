@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gms.ads.nativead.NativeAdView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_native_ad">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ad_app_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="12dp"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:src="@color/lightTransparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ad_media"
+            app:shapeAppearanceOverlay="@style/radius8dp" />
+
+        <TextView
+            android:id="@+id/tv_ad"
+            style="@style/AppTheme.Ads"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/bg_tv_ads"
+            app:layout_constraintStart_toEndOf="@id/ad_app_icon"
+            app:layout_constraintTop_toBottomOf="@id/ad_media" />
+
+        <TextView
+            android:id="@+id/ad_headline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingStart="12dp"
+            android:textColor="@color/app_color"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_ad"
+            app:layout_constraintTop_toTopOf="@id/tv_ad" />
+
+        <TextView
+            android:id="@+id/ad_body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="6dp"
+            android:ellipsize="end"
+            android:lines="2"
+            android:paddingBottom="5dp"
+            android:textSize="12sp"
+            android:textColor="@color/color_700"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_ad"
+            app:layout_constraintTop_toBottomOf="@id/ad_headline" />
+
+        <com.google.android.gms.ads.nativead.MediaView
+            android:id="@+id/ad_media"
+            android:layout_width="0dp"
+            android:layout_height="136dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:paddingBottom="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_button" />
+
+        <LinearLayout
+            android:id="@+id/ll_button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ad_call_to_action"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_app_gradient"
+                android:text="Download"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_semi_bold"
+                android:gravity="center"
+                android:textAllCaps="true" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.gms.ads.nativead.NativeAdView>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="16dp">
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="name"
+        android:textColor="#3A3A39"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="14sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/tv_see_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/see_all"
+        android:textColor="@color/app_color"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="14sp"
+        app:layout_constraintTop_toTopOf="@id/tv_name"
+        app:layout_constraintBottom_toBottomOf="@id/tv_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_listImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal"
+        tools:listitem="@layout/item_template"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+</androidx.constraintlayout.widget.ConstraintLayout>

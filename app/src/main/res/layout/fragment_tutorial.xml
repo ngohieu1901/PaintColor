@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="12dp"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back_black" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/tutorial"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_marginEnd="24dp"/>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_tutorial"
+                android:adjustViewBounds="true"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="14dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/draw_with_camera"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/color_700"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/stabilize_your_phone_with_a_tripod_glass_or_stacked_books_while_drawing"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/color_500"
+                android:layout_marginBottom="32dp" />
+
+            <TextView
+                android:id="@+id/tv_continue"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/tv_continue"
+                android:background="@drawable/bg_btn_app_gradient"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/white"
+                android:layout_marginBottom="8dp" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fr_ads" />
+</LinearLayout>

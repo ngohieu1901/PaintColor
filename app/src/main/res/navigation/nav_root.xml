@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_app"
+    app:startDestination="@id/mainFragment" >
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.paintcolor.drawing.paint.presentations.feature.main.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_languageFragment"
+            app:destination="@id/languageFragment"
+            app:enterAnim="@anim/fade_slide_in_left"
+            app:exitAnim="@anim/fade_slide_out_right"
+            app:popEnterAnim="@anim/fade_slide_in_left"
+            app:popExitAnim="@anim/fade_slide_out_right"/>
+
+        <action
+            android:id="@+id/action_mainFragment_to_detailTemplateCategoryFragment"
+            app:destination="@id/detailTemplateCategoryFragment"
+            app:enterAnim="@anim/fade_slide_in_left"
+            app:exitAnim="@anim/fade_slide_out_right"
+            app:popEnterAnim="@anim/fade_slide_in_left"
+            app:popExitAnim="@anim/fade_slide_out_right"/>
+
+        <action
+            android:id="@+id/action_mainFragment_to_nav_coloring"
+            app:destination="@id/nav_coloring"
+            app:enterAnim="@anim/fade_slide_in_left"
+            app:exitAnim="@anim/fade_slide_out_right"
+            app:popEnterAnim="@anim/fade_slide_in_left"
+            app:popExitAnim="@anim/fade_slide_out_right">
+            <argument
+                android:name="urlTemplate"
+                app:argType="string" />
+        </action>
+
+        <action
+            android:id="@+id/action_mainFragment_to_nav_drawing"
+            app:destination="@id/nav_drawing"
+            app:enterAnim="@anim/fade_slide_in_left"
+            app:exitAnim="@anim/fade_slide_out_right"
+            app:popEnterAnim="@anim/fade_slide_in_left"
+            app:popExitAnim="@anim/fade_slide_out_right">
+            <argument
+                android:name="urlTemplate"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_mainFragment_to_viewImageColoringFragment"
+            app:destination="@id/viewImageColoringFragment"
+            app:enterAnim="@anim/fade_slide_in_left"
+            app:exitAnim="@anim/fade_slide_out_right"
+            app:popEnterAnim="@anim/fade_slide_in_left"
+            app:popExitAnim="@anim/fade_slide_out_right"
+            app:popUpToSaveState="true"
+            app:restoreState="true"/>
+        <action
+            android:id="@+id/action_mainFragment_to_viewVideoDrawingFragment"
+            app:destination="@id/viewVideoDrawingFragment"
+            app:enterAnim="@anim/fade_slide_in_left"
+            app:exitAnim="@anim/fade_slide_out_right"
+            app:popEnterAnim="@anim/fade_slide_in_left"
+            app:popExitAnim="@anim/fade_slide_out_right"
+            app:popUpToSaveState="true"
+            app:restoreState="true"/>
+        <action
+            android:id="@+id/action_mainFragment_to_viewImageDrawingFragment"
+            app:destination="@id/viewImageDrawingFragment"
+            app:enterAnim="@anim/fade_slide_in_left"
+            app:exitAnim="@anim/fade_slide_out_right"
+            app:popEnterAnim="@anim/fade_slide_in_left"
+            app:popExitAnim="@anim/fade_slide_out_right"
+            app:popUpToSaveState="true"
+            app:restoreState="true"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailTemplateCategoryFragment"
+        android:name="com.paintcolor.drawing.paint.presentations.feature.detail_template_category.DetailTemplateCategoryFragment"
+        android:label="DetailTemplateCategoryFragment"
+        tools:layout="@layout/fragment_detail_category" >
+        <argument
+            android:name="nameCategory"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_detail_template_category_to_nav_coloring"
+            app:destination="@id/nav_coloring"
+            app:enterAnim="@anim/fade_slide_in_left"
+            app:exitAnim="@anim/fade_slide_out_right"
+            app:popEnterAnim="@anim/fade_slide_in_left"
+            app:popExitAnim="@anim/fade_slide_out_right"
+            >
+            <argument
+                android:name="urlTemplate"
+                app:argType="string" />
+        </action>
+
+        <action
+            android:id="@+id/action_detailTemplateCategoryFragment_to_nav_drawing"
+            app:destination="@id/nav_drawing"
+            app:enterAnim="@anim/fade_slide_in_left"
+            app:exitAnim="@anim/fade_slide_out_right"
+            app:popEnterAnim="@anim/fade_slide_in_left"
+            app:popExitAnim="@anim/fade_slide_out_right" >
+            <argument
+                android:name="urlTemplate"
+                app:argType="string" />
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/languageFragment"
+        android:name="com.paintcolor.drawing.paint.presentations.feature.screen_base.language.LanguageFragment"
+        android:label="LanguageFragment"
+        tools:layout="@layout/fragment_language">
+         <action
+            android:id="@+id/action_languageFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+    <include app:graph="@navigation/nav_coloring" />
+
+    <include app:graph="@navigation/nav_drawing" />
+
+    <fragment
+        android:id="@+id/viewImageColoringFragment"
+        android:name="com.paintcolor.drawing.paint.presentations.feature.view_color.ViewImageColoringFragment"
+        android:label="ViewImageColoringFragment"
+        tools:layout="@layout/fragment_view_image_coloring" >
+
+        <action
+            android:id="@+id/action_viewImageColoringFragment_to_nav_coloring"
+            app:destination="@id/nav_coloring"
+            app:enterAnim="@anim/fade_slide_in_left"
+            app:exitAnim="@anim/fade_slide_out_right"
+            app:popEnterAnim="@anim/fade_slide_in_left"
+            app:popExitAnim="@anim/fade_slide_out_right">
+            <argument
+                android:name="urlTemplate"
+                app:argType="string" />
+        </action>
+        <argument
+            android:name="coloringMyCreation"
+            app:argType="com.paintcolor.drawing.paint.domain.model.ColoringMyCreation" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewVideoDrawingFragment"
+        android:name="com.paintcolor.drawing.paint.presentations.feature.view_draw.ViewVideoDrawingFragment"
+        android:label="ViewVideoDrawingFragment"
+        tools:layout="@layout/fragment_view_video_drawing" >
+        <argument
+            android:name="sketchMyCreation"
+            app:argType="com.paintcolor.drawing.paint.domain.model.SketchMyCreation" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewImageDrawingFragment"
+        android:name="com.paintcolor.drawing.paint.presentations.feature.view_draw.ViewImageDrawingFragment"
+        android:label="ViewImageDrawingFragment"
+        tools:layout="@layout/fragment_view_image_drawing">
+
+        <argument
+            android:name="sketchMyCreation"
+            app:argType="com.paintcolor.drawing.paint.domain.model.SketchMyCreation" />
+    </fragment>
+</navigation>

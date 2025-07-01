@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_white"
+    android:paddingHorizontal="30dp"
+    android:paddingVertical="20dp"
+    android:layout_marginHorizontal="24dp"
+    android:gravity="center"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/img_reward"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unlock_download_items"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="#1C1C1E"
+        android:layout_marginBottom="6dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/become_a_vip_or_watch_ads_to_unlock_for_free"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="#636366"
+        android:layout_marginBottom="16dp"
+        android:layout_marginHorizontal="24dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_watch"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_btn_app_gradient"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginHorizontal="32dp">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_ads"
+            android:layout_marginEnd="8dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/watch_video"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_semibold" />
+    </LinearLayout>
+</LinearLayout>

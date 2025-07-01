@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_dialog_white"
+    android:paddingHorizontal="30dp"
+    android:paddingVertical="20dp"
+    android:layout_marginHorizontal="24dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/watch_2_videos_to_unlock_all_animations"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="#1C1C1E"
+        android:layout_marginBottom="4dp"
+        />
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/img_reward"
+        android:layout_marginBottom="8dp" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:progress="0"
+        android:max="100"
+        android:layout_marginHorizontal="64dp"
+        android:layout_marginBottom="6dp"
+        app:indicatorColor="@color/app_color"
+        app:layout_constraintBottom_toTopOf="@id/tv_splash"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:trackColor="@color/not_select"
+        app:trackCornerRadius="100dp"
+        app:trackThickness="4dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+        <TextView
+            android:id="@+id/tv_current_count_watched"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/app_color"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/2"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="#1B1B1B"
+            android:layout_marginEnd="4dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/videos_watched"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="#7D7D7D"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_watch"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_btn_app_gradient"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginHorizontal="32dp">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_ads"
+            android:layout_marginEnd="8dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/watch_video"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_semibold" />
+    </LinearLayout>
+</LinearLayout>

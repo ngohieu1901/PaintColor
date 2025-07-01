@@ -1,0 +1,3 @@
+C:/FIGMA_VIDEO_DOWNLOAD/PaintColor/gpuimage/.cxx/Debug/16v3231h/x86/CMakeFiles/yuv-decoder.dir
+C:/FIGMA_VIDEO_DOWNLOAD/PaintColor/gpuimage/.cxx/Debug/16v3231h/x86/CMakeFiles/edit_cache.dir
+C:/FIGMA_VIDEO_DOWNLOAD/PaintColor/gpuimage/.cxx/Debug/16v3231h/x86/CMakeFiles/rebuild_cache.dir

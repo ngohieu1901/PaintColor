@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingTop="160dp">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:adjustViewBounds="true"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/img_no_data_drawing"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_internet"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_semibold"
+        android:layout_marginBottom="8dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/there_is_no_internet_connection_nplease_check_your_internet_connection"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="#717171"
+        android:gravity="center"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="32dp"/>
+
+    <TextView
+        android:id="@+id/tv_try_again"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:text="Try Again"
+        android:background="@drawable/bg_btn_app_gradient"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="14sp"
+        />
+
+</LinearLayout>

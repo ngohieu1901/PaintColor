@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_F8F6F9"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="16dp">
+
+        <ImageView
+            android:id="@+id/iv_clear"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_clean_enable"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_import"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_import_image"
+            app:layout_constraintStart_toEndOf="@id/iv_clear"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="24dp"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_undo"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/ic_undo_enable" />
+
+            <ImageView
+                android:id="@+id/iv_redo"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_redo_enable" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_btn_app_gradient"
+            android:fontFamily="@font/poppins_semibold"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="6dp"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.paintcolor.drawing.paint.coloring_source.PaintView
+        android:id="@+id/drawView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="12dp"
+        android:layout_weight="1"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingVertical="14dp"
+        android:layout_marginStart="16dp">
+
+        <LinearLayout
+            android:id="@+id/ll_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingVertical="3dp"
+                android:text="@string/size"
+                android:textColor="@color/color_700"
+                android:textSize="12sp" />
+
+            <com.paintcolor.drawing.paint.presentations.components.views.SizeSliderView
+                android:id="@+id/seekBar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="10dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/color_300" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_pen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_drawing_paint_brush" />
+
+            <LinearLayout
+                android:id="@+id/ll_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civ_logo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="8dp"
+                    android:src="@drawable/ic_more" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/more"
+                    android:textColor="@color/color_700"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="12dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/color_300" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="9"
+            tools:listitem="@layout/item_drawing_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_previous"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_arrow_left" />
+
+            <LinearLayout
+                android:id="@+id/ll_palette_selected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="8dp"
+                android:background="@drawable/bg_transparent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="32dp"
+                android:paddingVertical="10dp"
+                >
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_small_color"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/item_color_circle_small"
+                    android:overScrollMode="never" />
+                <TextView
+                    android:id="@+id/tv_name_palette_selected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center"
+                    android:maxWidth="120dp"
+                    android:maxLines="1"
+                    android:text="Haha"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_next"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_arrow_right" />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_300" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/collapsible_banner_container_view"/>
+</LinearLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="16dp"
+    android:padding="20dp"
+    android:gravity="center"
+    android:background="@drawable/bg_dialog_white">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/congratulations"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="#1C1C1E"
+        android:layout_marginBottom="24dp"
+        />
+
+    <ImageView
+        android:layout_width="112dp"
+        android:layout_height="112dp"
+        android:src="@drawable/img_congratulation"
+        android:layout_marginBottom="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/you_have"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="#7D7D7D"
+                android:layout_marginEnd="4dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/unlocked"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/app_color"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/all_animations"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="#7D7D7D"
+            android:layout_marginEnd="4dp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_ok"
+        android:layout_width="168dp"
+        android:layout_height="48dp"
+        android:text="@string/ok"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_btn_app_gradient"
+        android:layout_marginEnd="4dp"
+        />
+</LinearLayout>

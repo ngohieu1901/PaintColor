@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fcv_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:defaultNavHost="false"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:navGraph="@navigation/nav_main"
+        />
+    <com.paintcolor.drawing.paint.presentations.components.views.BottomNavView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_nav" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/collapsible_banner_container_view" />
+</LinearLayout>

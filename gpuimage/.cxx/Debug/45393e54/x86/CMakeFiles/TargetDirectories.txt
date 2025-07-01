@@ -1,0 +1,3 @@
+C:/Amazic/ASA111SketchDraw/gpuimage/.cxx/Debug/45393e54/x86/CMakeFiles/yuv-decoder.dir
+C:/Amazic/ASA111SketchDraw/gpuimage/.cxx/Debug/45393e54/x86/CMakeFiles/edit_cache.dir
+C:/Amazic/ASA111SketchDraw/gpuimage/.cxx/Debug/45393e54/x86/CMakeFiles/rebuild_cache.dir

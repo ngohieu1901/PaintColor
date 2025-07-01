@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/img_splash"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom|center"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/ic_logo_app"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/app_name"
+            android:textSize="24sp"
+            android:textColor="@color/color_700"
+            android:gravity="center"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="90dp" />
+
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/loading"
+            android:textSize="14sp"
+            android:textColor="@color/color_700"
+            android:layout_marginBottom="12dp" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:progress="0"
+            android:layout_marginHorizontal="64dp"
+            android:layout_marginBottom="12dp"
+            app:indicatorColor="@color/app_color"
+            app:layout_constraintBottom_toTopOf="@id/tv_splash"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:trackColor="@color/not_select"
+            app:trackCornerRadius="100dp"
+            app:trackThickness="4dp" />
+
+        <TextView
+            android:id="@+id/tv_splash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:text="@string/this_action_may_contain_advertising"
+            android:textColor="@color/color_500"
+            android:textSize="12sp" />
+
+        <FrameLayout
+            android:id="@+id/fr_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:visibility="visible"/>
+    </LinearLayout>
+
+</FrameLayout>

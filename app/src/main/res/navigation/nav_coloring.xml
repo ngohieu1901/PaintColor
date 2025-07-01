@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_coloring"
+    app:startDestination="@+id/coloringPictureFragment">
+    <fragment
+        android:id="@+id/coloringPictureFragment"
+        android:name="com.paintcolor.drawing.paint.presentations.feature.coloring_picture.ColoringPictureFragment"
+        android:label="ColoringPictureFragment"
+        tools:layout="@layout/fragment_coloring_picture">
+        <argument
+            android:name="urlTemplate"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_coloringPictureFragment_to_paintBrushFragment"
+            app:destination="@id/paintBrushFragment"
+            app:enterAnim="@anim/fade_slide_in_left"
+            app:exitAnim="@anim/fade_slide_out_right"
+            app:popEnterAnim="@anim/fade_slide_in_left"
+            app:popExitAnim="@anim/fade_slide_out_right"/>
+        <action
+            android:id="@+id/action_coloringPictureFragment_to_colorPalettesFragment"
+            app:destination="@id/colorPalettesFragment"
+            app:enterAnim="@anim/fade_slide_in_left"
+            app:exitAnim="@anim/fade_slide_out_right"
+            app:popEnterAnim="@anim/fade_slide_in_left"
+            app:popExitAnim="@anim/fade_slide_out_right"/>
+        <action
+            android:id="@+id/action_coloringPictureFragment_to_successfullyFragment"
+            app:destination="@id/successfullyFragment"
+            app:enterAnim="@anim/fade_slide_in_left"
+            app:exitAnim="@anim/fade_slide_out_right"
+            app:popEnterAnim="@anim/fade_slide_in_left"
+            app:popExitAnim="@anim/fade_slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/paintBrushFragment"
+        android:name="com.paintcolor.drawing.paint.presentations.feature.paint_brush.PaintBrushFragment"
+        android:label="PaintBrushFragment"
+        tools:layout="@layout/fragment_paint_brush"/>
+    <fragment
+        android:id="@+id/colorPalettesFragment"
+        android:name="com.paintcolor.drawing.paint.presentations.feature.color_palette.select.ColorPalettesFragment"
+        android:label="ColorPalettesFragment"
+        tools:layout="@layout/fragment_color_palettes" >
+        <action
+            android:id="@+id/action_colorPalettesFragment_to_customYourPaletteFragment"
+            app:destination="@id/customYourPaletteFragment"
+            app:enterAnim="@anim/fade_slide_in_left"
+            app:exitAnim="@anim/fade_slide_out_right"
+            app:popEnterAnim="@anim/fade_slide_in_left"
+            app:popExitAnim="@anim/fade_slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/customYourPaletteFragment"
+        android:name="com.paintcolor.drawing.paint.presentations.feature.custom_your_palette.CustomYourPaletteFragment"
+        android:label="CustomYourPaletteFragment"
+        tools:layout="@layout/fragment_custom_your_palette">
+
+        <argument
+            android:name="colorPalette"
+            app:argType="com.paintcolor.drawing.paint.domain.model.ColorPalette"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/successfullyFragment"
+        android:name="com.paintcolor.drawing.paint.presentations.feature.successfully.SuccessfullyFragment"
+        android:label="SuccessfullyFragment"
+        tools:layout="@layout/fragment_successfully">
+        <argument
+            android:name="imagePath"
+            app:argType="string" />
+    </fragment>
+</navigation>

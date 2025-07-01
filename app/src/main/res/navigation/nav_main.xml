@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/coloringFragment">
+
+    <fragment
+        android:id="@+id/coloringFragment"
+        android:name="com.paintcolor.drawing.paint.presentations.feature.coloring.ColoringFragment"
+        android:label="ColoringFragment"
+        tools:layout="@layout/fragment_coloring" />
+
+    <fragment
+        android:id="@+id/myCreationFragment"
+        android:name="com.paintcolor.drawing.paint.presentations.feature.my_creation.MyCreationFragment"
+        android:label="MyCreationFragment"
+        tools:layout="@layout/fragment_my_creation" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.paintcolor.drawing.paint.presentations.feature.settings.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

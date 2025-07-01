@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "744740607336",
+    "project_id": "asa274-paint-color-v2",
+    "storage_bucket": "asa274-paint-color-v2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744740607336:android:21f77177e76fc2b9b5b2dd",
+        "android_client_info": {
+          "package_name": "com.paintcolor.drawing.paint"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAW9UCwEMd8AopcPGwGISggoghyzUqahEU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

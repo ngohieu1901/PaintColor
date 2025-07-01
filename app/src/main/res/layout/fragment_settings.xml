@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:paddingVertical="12dp"
+        android:background="@color/white"
+        android:layout_marginBottom="20dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="#1AFBA00E"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="20dp"
+        android:theme="@style/Theme.MaterialComponents.Light">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="24dp"
+            android:paddingHorizontal="16dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/ll_language"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/ic_language_setting"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Language"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="English"
+                    android:fontFamily="@font/inter_medium"
+                    android:textSize="14sp"
+                    android:textColor="@color/app_color"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/ic_more_setting"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_rate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/ic_rate_setting"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rate"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="12dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/ic_more_setting"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_share"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/ic_share_setting"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/share"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="12dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/ic_more_setting"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_policy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/ic_policy_setting"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/privacy_policy"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="12dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/ic_more_setting"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

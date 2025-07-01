@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_drawing"
+    app:startDestination="@id/tutorialFragment">
+
+    <fragment
+        android:id="@+id/tutorialFragment"
+        android:name="com.paintcolor.drawing.paint.presentations.feature.tutorial.TutorialFragment"
+        android:label="TutorialFragment"
+        tools:layout="@layout/fragment_tutorial" >
+        <argument
+            android:name="urlTemplate"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_tutorialFragment_to_drawingFragment"
+            app:destination="@id/drawingFragment"
+            app:enterAnim="@anim/fade_slide_in_left"
+            app:exitAnim="@anim/fade_slide_out_right"
+            app:popEnterAnim="@anim/fade_slide_in_left"
+            app:popExitAnim="@anim/fade_slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/drawingFragment"
+        android:name="com.paintcolor.drawing.paint.presentations.feature.drawing.DrawingFragment"
+        android:label="DrawingFragment"
+        tools:layout="@layout/fragment_drawing" >
+        <argument
+            android:name="urlTemplate"
+            app:argType="string" />
+        <argument
+            android:name="isRemoveBackground"
+            app:argType="boolean" />
+    </fragment>
+
+</navigation>

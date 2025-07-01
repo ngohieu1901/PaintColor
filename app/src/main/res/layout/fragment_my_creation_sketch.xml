@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_drawing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="@color/white" >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_drawing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:paddingBottom="16dp"
+            tools:itemCount="6"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_sketch_my_creation"/>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/ll_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:paddingTop="70dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="150dp"
+            android:src="@drawable/img_no_data_drawing"
+            android:layout_marginBottom="12dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/oops_your_gallery_s_feeling_a_bit_lonely"
+            android:textColor="@color/color_700"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginHorizontal="16dp"
+            android:fontFamily="@font/poppins_semibold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/let_s_fill_it_up_start_creating_something_awesome"
+            android:textColor="@color/color_500"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:layout_marginHorizontal="24dp"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_explore"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="8dp"
+            android:background="@drawable/bg_btn_app_gradient"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_create_image"
+                android:layout_marginEnd="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/explore"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins_semibold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,20 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="compose"
+        android:enabled="true"
+        android:icon="@drawable/ic_delete_app"
+        android:shortcutShortLabel="@string/uninstall"
+        android:shortcutLongLabel="@string/uninstall"
+        android:shortcutDisabledMessage="@string/uninstall" >
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.paintcolor.drawing.paint"
+            android:targetClass="com.paintcolor.drawing.paint.presentations.feature.screen_base.splash.SplashActivity" />
+        <!-- If your shortcut is associated with multiple intents, include them
+             here. The last intent in the list determines what the user sees when
+             they launch this shortcut. -->
+        <categories android:name="android.shortcut.conversation" />
+        <capability-binding android:key="actions.intent.CREATE_MESSAGE" />
+    </shortcut>
+    <!-- Specify more shortcuts here. -->
+</shortcuts>
